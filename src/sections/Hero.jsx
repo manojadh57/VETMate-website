@@ -8,6 +8,12 @@ function Hero() {
     whatsappMessage,
   )}`;
 
+  const gmailUrl =
+    "https://mail.google.com/mail/?view=cm&fs=1" +
+    "&to=vetmatesupport@gmail.com" +
+    "&su=VETMate%20Study%20Support" +
+    "&body=Hi%20VETMate,%20I%20need%20help%20with%20my%20VET%20assessment.";
+
   return (
     <section id="home" className="px-4 pb-16 pt-[145px] md:px-7 md:pt-[170px]">
       <div className="mx-auto max-w-[1450px]">
@@ -91,11 +97,13 @@ function Hero() {
               <WhatsAppIcon />
             </a>
 
-            {/* EMAIL / CONTACT */}
+            {/* GMAIL */}
             <a
-              href="#contact"
-              aria-label="Go to contact form"
-              title="Contact VETMate"
+              href={gmailUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email VETMate"
+              title="Email VETMate"
               className="
                 flex
                 h-[52px]
@@ -232,7 +240,6 @@ function EmailIcon() {
       aria-hidden="true"
     >
       <rect x="3" y="5" width="18" height="14" />
-
       <path d="m3 7 9 6 9-6" />
     </svg>
   );
